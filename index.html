@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libros de Mónica</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="cabecera">
+    <h1 class="logo">Libros de Mónica</h1>
+    <nav class="navegacion">
+      <ul>
+        <li><a href="#libros">Libros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#redes_sociales">Redes sociales</a></li>
+      </ul>
+    </nav>
+    <button class="boton-menu" aria-label="Abrir menú">&#9776;</button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-texto">
+      <p>Soy escritora novel de género thriller y ciencia ficción. Nací en Barcelona en el año 1981. 
+        Tengo ahora mismo 1 relato y 2 libros publicados de una saga llamada "El legado del Violinista", 
+        de género Dark Thriller para mayores de 18 años. 
+        Entre mis proyectos actuales hay varias historias que estoy creando de ciencia ficción, 
+        distopia y también de género más Romcom con Spicy y mucho salseo.
+        ¡A la venta muy pronto!</p>
+      <a href="#libros" class="boton-primario">Ver los libros</a>
+    </div>
+    <div class="hero-visual">
+      <div class="portada-decorativa uno">
+        <img src="img/m1.jpg" alt="imagen">
+        <span class="titulo-mini"></span>
+      </div>
+      <div class="portada-decorativa dos">
+        <img src="img/m2.jpg" alt="imagen">
+        <span class="titulo-mini"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIBROS ============ -->
+  <section class="seccion" id="libros">
+    <h2 class="titulo-seccion">Libros</h2>
+
+    <!--
+      El "carrusel-libros" es el contenedor que agrupa:
+      - la flecha izquierda
+      - la rejilla de libros (que ahora se desliza en horizontal)
+      - la flecha derecha
+      Las flechas están posicionadas con position:absolute respecto
+      a este contenedor (por eso lleva position:relative en el CSS).
+    -->
+    <div class="carrusel-libros">
+
+      <button class="flecha flecha-izquierda" aria-label="Libro anterior">&#10094;</button>
+
+      <div class="rejilla-libros">
+
+        <!-- Ficha de libro 1 -->
+        <article class="ficha-libro">
+          <div class="portada-libro">
+            <img src="img/libro1.jpg" alt="">
+          </div>
+          <div class="info-libro">
+            <h3>El violinista - La melodia del mal</h3>
+            <span class="autor">Mónica Ruano Martínez</span>
+            <p class="sinopsis">Thriller</p>
+
+            <!--
+              Lista de formatos disponibles para este libro. Cada
+              <li class="formato"> es un formato distinto (tapa
+              blanda, ebook, audiolibro...): escribe tú la
+              descripción con tus propias palabras, y en el href del
+              enlace pon el Payment Link de Stripe de ESE formato en
+              concreto (cada uno puede tener uno diferente).
+            -->
+            <ul class="lista-formatos">
+              <li class="formato">
+                <p class="formato-descripcion">Formato digital</p>
+                <a href="https://amzn.eu/d/03VMbMrv" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato bolsillo</p>
+                <a href="https://amzn.eu/d/00io62Qd" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato normal (6x9 pulgadas)</p>
+                <a href="https://amzn.eu/d/05xcOH1O" class="formato-enlace">Comprar</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ficha de libro 2 -->
+        <article class="ficha-libro">
+          <div class="portada-libro alterna">
+            <img src="img/libro2.jpg" alt="">
+          </div>
+          <div class="info-libro">
+            <h3>El origen del violinista - La sinfonía del miedo</h3>
+            <span class="autor">Mónica Ruano Martínez</span>
+            <p class="sinopsis">Thriller</p>
+
+            <ul class="lista-formatos">
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato bolsillo</p>
+                <a href="https://amzn.eu/d/0iIfk8vx" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato normal (6x9 pulgadas)</p>
+                <a href="https://amzn.eu/d/01YRACnO" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa dura</p>
+                <a href="https://amzn.eu/d/01ewclhR" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Formato digital</p>
+                <a href="https://amzn.eu/d/0j2zDpuB" class="formato-enlace">Comprar</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ficha de libro 3 -->
+        <article class="ficha-libro">
+          <div class="portada-libro tercera">
+            <img src="img/libro3.jpg" alt="">
+          </div>
+          <div class="info-libro">
+            <h3>El origen del violinista PARTE 2 - La herencia maldita</h3>
+            <span class="autor">Mónica Ruano Martínez</span>
+            <p class="sinopsis">Thriller</p>
+
+            <ul class="lista-formatos">
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato normal (6x9 pulgadas)</p>
+                <a href="https://amzn.eu/d/02wKZLTX" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa dura</p>
+                <a href="https://amzn.eu/d/01xqZXdW" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Formato digital</p>
+                <a href="https://amzn.eu/d/00Cwy1Qx" class="formato-enlace">Comprar</a>
+              </li>
+              <li class="formato">
+                <p class="formato-descripcion">Tapa blanda formato bolsillo</p>
+                <a href="https://www.amazon.es/dp/B0HDJWQPJW" class="formato-enlace">Comprar</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ficha "en blanco": hueco reservado para un futuro libro 4.
+             Lleva la clase extra "proximamente", que en el CSS le quita
+             color y desactiva el botón de compra. -->
+        <article class="ficha-libro proximamente">
+          <div class="portada-libro vacia">Próximamente</div>
+          <div class="info-libro">
+            <h3>Próximamente</h3>
+            <span class="autor">&nbsp;</span>
+            <p class="sinopsis">Un nuevo libro está en camino.</p>
+            <div class="fila-compra">
+              <span class="precio-sello">—</span>
+              <span class="boton-comprar deshabilitado">Próximamente</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="flecha flecha-derecha" aria-label="Libro siguiente">&#10095;</button>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="contacto" id="contacto">
+    <div class="contenedor contenedor-contacto">
+
+      <!-- Columna izquierda: texto + formulario -->
+      <div class="columna-formulario">
+        <h2 class="titulo-contacto">Escríbenos</h2>
+        <p class="texto-contacto">¿Tienes alguna pregunta sobre los libros? Déjanos tu mensaje y te responderemos por correo.</p>
+
+        <!--
+          Como esta es una web estática (sin servidor detrás), este
+          formulario no puede "enviarse solo" a un servidor propio.
+          El script.js intercepta el envío y abre el programa de correo
+          del visitante (Gmail, Outlook, Mail...) con un email ya
+          redactado y dirigido a tu correo, usando un enlace "mailto:".
+          El visitante solo tiene que darle a "Enviar" en su propio
+          correo para que llegue.
+        -->
+        <form class="formulario-contacto" id="formulario-contacto">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="boton-comprar boton-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <!-- Columna derecha: hueco para una imagen (foto de la autora,
+           de los libros, de la librería... lo que quieras poner).
+           Sustituye el src cuando tengas la imagen definitiva. -->
+      <div class="columna-imagen">
+        <img src="img/m3.jpg" alt="imagen">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="redes_sociales">
+  <div id="apps2">
+    <div class="bum">
+        <ul>
+            <li>
+                <p>Aquí estan mis redes sociales, accede haciendo clic a cada icono</p>
+            </li>
+            <li><a href="https://www.instagram.com/monica.r.martinez?utm_source=qr&stkn=MXFha2t4cThwY2wxYg==
+"><i class='bx bxl-instagram'></i></a></li>
+            <li><a href="https://www.tiktok.com/@monica.r.martinez0?_r=1&_t=ZN-99U8aQ8NF1K"><i class='bx bxl-tiktok'></i></a></li>
+            <li><a href="https://www.facebook.com/share/19LtznzxjE/
+"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="https://www.goodreads.com/user/show/203853951-monica-r-mart-nez"><i class='bx bxl-google'></i></a></li>
+        </ul>
+    </div>
+</div>
+</section>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <p>Badalona, España</p>
+    <p>&copy; 2026, Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- El script se carga al final para que el HTML ya exista cuando se ejecute -->
+  <script src="js/script.js"></script>
+</body>
+</html>
